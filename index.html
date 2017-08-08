@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="time.css">
+  <link rel="stylesheet" href="main-focus.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="top-bar"></div>
+<div class="central-block">
+  <div class="time">
+    <span class="hours"></span>
+    <span class="divider">:</span>
+    <span class="minutes"></span>
+  </div>
+  <h1 class="greeting"></h1>
+</div>
+<div class="main-focus">
+  <div class="setfocus" hidden>
+  <h2 class="focus-q">What is your main focus for today?</h2>
+  <input type="text" class="focus-field">
+  </div>
+  <div class="yourfocus" hidden>
+    <div class="today">today</div>
+    <div class="yourfocus_panel">
+    <input type="checkbox" id="check" class="switchOnHover">
+    <label for="check" class="switchOnHover"></label>
+    <span class="goaltext"></span>
+    <span  class="close switchOnHover"><i>&#10006;</i></span>
+    </div>
+  </div>
+  <span class="focus-status"></span>
+</div>
+  <script src="jquery.js"></script>
+  <script type="text/javascript" src="time.js"></script>
+  <script type="text/javascript" src="main-focus.js"></script>
+</body>
+</html>
