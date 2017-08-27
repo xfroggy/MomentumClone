@@ -101,6 +101,7 @@ $("#searchBox").focus(function()
     $(".search").css({"border-bottom": "2px solid white", "transition-timing-function": "ease-out", "transition": "0.25s"});
   }).blur(function()
   {
+<<<<<<< HEAD
     // Border for the usual condition
     $(".search").css({"border-bottom": "2px solid transparent"});
   });
@@ -116,6 +117,18 @@ $(document).keypress(function(e) {
      // Eliminating value of the searchBox
 
      $("#searchBox").val('');
+=======
+    $(".search").css({"border-bottom": "none"});
+  });
+
+// takes text on return keypress and opens new google search page
+$(document).keypress(function(e) {
+   if(e.which == 13) {
+   var searchString = document.getElementById("searchBox").value;
+      searchString = encodeURIComponent(searchString);
+      var searchURL =  "http://www.google.com/search?q="+searchString;
+     window.open(searchURL, "_self");
+>>>>>>> 9a7cff4cf5a3dad8272c62d66f5e968beac24c04
    }//if
 });//keypress
 });// jquery document closing  

@@ -144,8 +144,12 @@ feature/search
 }
 
 .search {
+<<<<<<< HEAD
   /*Add invisible border in order to make it stable on focus---Changed it because without transparent border it moves content on focus*/
   border-bottom: 2px solid transparent;
+=======
+  /*border-bottom: 2px solid white;*/
+>>>>>>> 9a7cff4cf5a3dad8272c62d66f5e968beac24c04
   color: white;
 }
 
