@@ -101,7 +101,8 @@ $("#searchBox").focus(function()
     $(".search").css({"border-bottom": "2px solid white", "transition-timing-function": "ease-out", "transition": "0.25s"});
   }).blur(function()
   {
-    $(".search").css({"border-bottom": "none"});
+    // Border for the usual condition
+    $(".search").css({"border-bottom": "2px solid transparent"});
   });
 
 // takes text on return keypress and opens new google search page
@@ -111,6 +112,10 @@ $(document).keypress(function(e) {
       searchString = encodeURIComponent(searchString);
       var searchURL =  "http://www.google.com/search?q="+searchString;
      window.open(searchURL, "_self");
+
+     // Eliminating value of the searchBox
+
+     $("#searchBox").val('');
    }//if
 });//keypress
 });// jquery document closing  
