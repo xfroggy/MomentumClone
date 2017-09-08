@@ -12,6 +12,8 @@ html {
 }
 
 body {
+  opacity: 0;
+  transition: opacity 1s;
   height: 100%;
   font-size: 100%;
   line-height: 24px;
@@ -41,18 +43,67 @@ a, a:hover {
 .clearfix:after {
   clear: both;
 }
-.central-block {
-  width: 100%;
-  margin-top: 200px;
+
+.location {
+  clear: both;
+  padding: 0 2px;
+  margin: 0 auto;
+  font-size: 0.6em;
+  overflow: hidden;
+  white-space: nowrap;
   text-align: center;
+  line-height: 1.6em;
 }
-.central-block span {
+
+.location:focus {
+  outline: 1px solid #666;
+  background: rgba(213, 213, 213, 0.2);
+}
+
+.animation {
+  animation: fade 2s;
+}
+
+@keyframes fade {
+  0% {
+    background: rgba(213, 213, 213, 0.9);
+  }
+  100% {
+    background: rgba(213, 213, 213, 0.2);
+  }
+}
+
+.location, .display {
   font-weight: bold;
-font-size: 8em;
-color: #fff;
-}
-.central-block .greeting {
-  margin-top: 50px;
-  font-size: 3em;
+  text-align: center;
   color: #fff;
+}
+.display {
+display: inline-block;
+width: 50px;
+user-select: none;
+ -webkit-user-select: none;
+}
+.sign {
+  margin-left: 3px;
+  color: #fff;
+}
+
+.sign:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.weatherImg {
+  display: inline-block;
+  margin: auto;
+  width: 26px;
+  margin-bottom: -5px;
+}
+.weather-block {
+  float: right;
+}
+.weather-inner-block {
+  text-align: right;
+  margin-right: 15px;
 }

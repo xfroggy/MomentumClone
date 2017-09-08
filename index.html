@@ -1,21 +1,127 @@
 <html>
 
 <head>
- <script src="jquery.js"></script>
-
   <link rel="stylesheet" href="main-focus.css">
   <link rel="stylesheet" href="time.css">
+  <link rel="stylesheet" href="links.css">
+  <link rel="stylesheet" href="weather.css">
   <link rel="stylesheet" href="font-awesome.min.css">
-  
-
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-  
-<!-- start feature/search code  -->
-  <div>
-    <table class="search"> 
+  <div class="top-bar clearfix">
+    <div class="links-block">
+      <a id="linkPopup">Links</a>
+      <ul class="links-popup">
+        <li><a href="chrome-search://local-ntp/local-ntp.html" class="defaulBlank default">
+            <svg class="svg_links svg_newTab" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	width="16px" height="16px" viewBox="0 0 503.747 503.747" style="enable-background:new 0 0 503.747 503.747;" xml:space="preserve">
+            <g>
+            	<g>
+            		<g>
+            			<path d="M281.637,362.845c-6.782,2.04-17.047,5.128-29.763,5.128c-22.914,0-44.091-6.253-62.909-18.583
+            				c-18.919-12.406-33.28-28.546-42.958-48.481L38.814,113.031l-7.252,12.968C10.671,163.375,0.07,205.703,0.07,251.808
+            				c0,62.657,20.69,118.104,61.499,164.788c40.775,46.634,92.227,74.928,152.92,84.069l5.657,0.856l83.96-145.274L281.637,362.845z"
+            				/>
+            			<path d="M138.303,220.311c6.329-24.744,20.514-45.803,42.169-62.59c20.354-15.763,43.713-23.426,71.403-23.426h223.836
+            				l-7.42-12.641c-21.135-36.05-50.898-64.89-90.977-88.19C339.1,11.256,296.889,0,251.875,0c-39.172,0-76.246,8.444-110.189,25.105
+            				c-36.184,17.744-66.921,42.781-88.87,72.435l-3.357,4.541l83.918,137.51L138.303,220.311z"/>
+            			<path d="M484.565,156.93l-2.275-4.801H315.286l14.328,14.328c24.786,24.794,38.434,55.095,38.434,85.345
+            				c0,24.173-6.874,46.584-20.749,67.114L240.081,503.747l14.739-0.143c68.541-0.655,127.782-25.81,176.094-74.76
+            				c48.279-48.951,72.763-108.519,72.763-177.043C503.677,226.906,500.361,190.235,484.565,156.93z"/>
+            			<path d="M151.155,251.804c0,54.599,46.122,100.721,100.721,100.721c54.599,0,100.721-46.122,100.721-100.721
+            				s-46.122-100.721-100.721-100.721C197.277,151.083,151.155,197.205,151.155,251.804z"/>
+            		</g>
+            	</g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            </svg>Chrome tab</a>
+        </li>
+        <li>
+          <a href="chrome://apps" class="defaulApps default">
+          <svg class="svg_links svg_apps" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="16px" height="16px" viewBox="0 0 408 408" style="enable-background:new 0 0 408 408;" xml:space="preserve">
+        <g>
+        	<g id="apps">
+        		<path d="M0,102h102V0H0V102z M153,408h102V306H153V408z M0,408h102V306H0V408z M0,255h102V153H0V255z M153,255h102V153H153V255z
+        			 M306,0v102h102V0H306z M153,102h102V0H153V102z M306,255h102V153H306V255z M306,408h102V306H306V408z"/>
+        	</g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        </svg>
+Apps</a></li>
+        <li class="newLink"><a class="newLinkA" href="#">New Link</a></li>
+        <div class="linksCreator">
+          <span class="close">&#10006;</span>
+          <input type="text" placeholder="Name" class="nameInput">
+          <input type="text" placeholder="URL" class="urlInput">
+
+        </div>
+      </ul>
+    </div>
+    <!-- start feature/search code  -->
+  <div class="search-box">
+    <table class="search">
       <tr>
        <td class = "search-glass"><i class="fa"></i></td>
         <td>
@@ -25,44 +131,45 @@
     </table>
     </div>
 
-<!-- end feature/search code -->  
-
-  <div class="top-bar"></div>
-<div class="central-block">
-  <div class="time">
-    <span class="hours"></span>
-    <span class="divider">:</span>
-    <span class="minutes"></span>
-  </div>
-  <h1 class="greeting"></h1>
-</div>
-<div class="main-focus">
-  <div class="setfocus" hidden>
-  <h2 class="focus-q">What is your main focus for today?</h2>
-  <input type="text" class="focus-field">
-  </div>
-  <div class="yourfocus" hidden>
-    <div class="today">today</div>
-    <div class="yourfocus_panel">
-    <input type="checkbox" id="check" class="switchOnHover">
-    <label for="check" class="switchOnHover"></label>
-    <span class="goaltext"></span>
-    <span  class="close switchOnHover"><i>&#10006;</i></span>
+<!-- end feature/search code -->
+    <div class="weather-block clearfix">
+      <div class="clearfix weather-inner-block">
+      <img src="" alt="weather" class="weatherImg">
+      <div class="display"><span class="degrees"></span>&deg;<span class="sign">C</span></div>
+      </div>
+      <div class="location" tabindex="1"></div>
     </div>
-    <span class="focus-status"></span>
   </div>
-
-</div>
-  <!-- <h1>Weather App</h1>
-  <div class="weather-info">
-    <div class="location" tabindex="1"></div>
-    <div class="display"><span class="degrees"></span>&deg;<span class="sign">C</span></div>
-    <div class="description"></div>
-    <img src="" alt="weather" class="weatherImg">
-  <script src="jquery.js"></script>-->
+  <div class="central-block">
+    <div class="time">
+      <span class="hours"></span>
+      <span class="divider">:</span>
+      <span class="minutes"></span>
+    </div>
+    <h1 class="greeting"></h1>
+  </div>
+  <div class="main-focus">
+    <div class="setfocus" hidden>
+      <h2 class="focus-q">What is your main focus for today?</h2>
+      <input type="text" class="focus-field">
+    </div>
+    <div class="yourfocus" hidden>
+      <div class="today">today</div>
+      <div class="yourfocus_panel">
+        <input type="checkbox" id="check" class="switchOnHover">
+        <label for="check" class="switchOnHover"></label>
+        <span class="goaltext"></span>
+        <span class="close switchOnHover"><i>&#10006;</i></span>
+      </div>
+      <span class="focus-status"></span>
+    </div>
+  </div>
+  <script src="jquery.js"></script>
+  <script type="text/javascript" src="links.js"></script>
   <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="time.js"></script>
   <script type="text/javascript" src="main-focus.js"></script>
-    <!-- <script type="text/javascript" src="script.js"></script> -->
+  <script type="text/javascript" src="weather.js"></script>
 </body>
+
 </html>
